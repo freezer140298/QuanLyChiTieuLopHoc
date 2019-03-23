@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="416.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainApp.Controller">
+   <children>
+      <Label layoutX="30.0" layoutY="65.0" text="Các khoản thu :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="426.0" layoutY="65.0" text="Các khoản chi :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="376.0" text="Tiền quỹ lớp hiện tại : ">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="currentAvailableCash" layoutX="217.0" layoutY="376.0" text="NULL">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="593.0" layoutY="34.0" text="Tài khoản hiện tại: ">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="currentAccountText" layoutX="732.0" layoutY="34.0" text="NULL">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="793.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Công cụ">
+            <items>
+              <MenuItem fx:id="accountManager" mnemonicParsing="false" onAction="#startAccountManger" text="Quản lý tài khoản" />
+                  <MenuItem fx:id="studentManager" mnemonicParsing="false" onAction="#startStudentManager" text="Quản lý danh sách học sinh" />
+                  <MenuItem fx:id="incomeManager" mnemonicParsing="false" onAction="#startIncomeManager" text="Quản lý thu quỹ" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="fundTableView" layoutX="30.0" layoutY="99.0" onMouseClicked="#fundContextMenu" prefHeight="252.0" prefWidth="333.0">
+        <columns>
+          <TableColumn fx:id="fundNameCol" prefWidth="88.0" text="Tên" />
+          <TableColumn fx:id="fundCashCol" minWidth="0.0" prefWidth="111.0" text="Số tiền" />
+            <TableColumn fx:id="fundDateCol" prefWidth="133.0" text="Ngày lập" />
+        </columns>
+      </TableView>
+      <TableView fx:id="payTableView" layoutX="426.0" layoutY="100.0" onMouseClicked="#payContextMenu" prefHeight="252.0" prefWidth="333.0">
+         <columns>
+            <TableColumn fx:id="payNameCol" prefWidth="88.0" text="Tên" />
+            <TableColumn fx:id="payCashCol" minWidth="0.0" prefWidth="111.0" text="Số tiền" />
+            <TableColumn fx:id="payDateCol" prefWidth="133.0" text="Ngày lập" />
+         </columns>
+      </TableView>
+   </children>
+</Pane>
