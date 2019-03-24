@@ -44,7 +44,7 @@ public class Controller {
         try
         {
             Class.forName("org.sqlite.JDBC");
-            String url = "jdbc:sqlite:D:\\Object Oriented Programming\\QuanLyChiTieuLopHoc\\database\\database.db";
+            String url = "jdbc:sqlite::resource:database.db";
             conn = DriverManager.getConnection(url);
 
             PreparedStatement statement = conn.prepareStatement("SELECT * FROM account WHERE username = ? AND password = ?");

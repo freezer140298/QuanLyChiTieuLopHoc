@@ -5,6 +5,7 @@ import fundManage.addFund.AddFundDialog;
 import fundManage.TableViewFund;
 import fundManage.editFund.EditFundDialog;
 import income.Income;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -23,10 +24,9 @@ import studentManage.StudentManage;
 
 import java.net.URL;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.ResourceBundle;
+import java.sql.Date;
+import java.text.NumberFormat;
+import java.util.*;
 
 import static login.Controller.account;
 import static login.Controller.conn;
@@ -63,7 +63,7 @@ public class Controller implements Initializable {
     private TableColumn<TableViewFund, String> fundNameCol;
 
     @FXML
-    private TableColumn<TableViewFund, Integer> fundCashCol;
+    private TableColumn<TableViewFund, String> fundCashCol;
 
     @FXML
     private TableColumn<TableViewFund, Date> fundDateCol;
@@ -75,7 +75,7 @@ public class Controller implements Initializable {
     private TableColumn<TableViewPay, String> payNameCol;
 
     @FXML
-    private TableColumn<TableViewPay, Integer> payCashCol;
+    private TableColumn<TableViewPay, String> payCashCol;
 
     @FXML
     private TableColumn<TableViewPay, Date> payDateCol;
@@ -109,181 +109,196 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        currentAccountText.setText(account.getUsername());
         updateAvailableCash();
 
         // Initialization for fund context menu
-        MenuItem addFund = new MenuItem("Thêm");
+        if(account.getPermission().equals("admin") || account.getPermission().equals("manager"))
+        {
+            MenuItem addFund = new MenuItem("Thêm");
 
-        addFund.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    AddFundDialog addFundDialog = new AddFundDialog();
-                    Stage addStage = new Stage();
-                    addFundDialog.start(addStage);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                fundTableViewBuild();
-                updateAvailableCash();
-            }
-        });
-
-
-        MenuItem editFund = new MenuItem("Chỉnh sửa");
-
-        editFund.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                tableViewFundSelected = fundTableView.getSelectionModel().getSelectedItem();
-                try
-                {
-                    EditFundDialog editFundDialog = new EditFundDialog();
-                    editFundDialog.start(new Stage());
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                fundTableViewBuild();
-                updateAvailableCash();
-            }
-        });
-
-        MenuItem deleteFund = new MenuItem("Xoá");
-
-        deleteFund.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                tableViewFundSelected = fundTableView.getSelectionModel().getSelectedItem();
-
-                Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);
-                confirm.setTitle("Xác nhận");
-                confirm.setContentText("Bạn có chắc chắn ?");
-                Optional<ButtonType> result = confirm.showAndWait();
-
-                if(result.get() == ButtonType.OK)
-                {
-                    try
-                    {
-                        PreparedStatement deleteStatement1 = conn.prepareStatement("DELETE FROM fund_list WHERE ID = ?");
-                        PreparedStatement deleteStatement2 = conn.prepareStatement("DELETE FROM income WHERE fundID = ?");
-
-                        deleteStatement1.setInt(1, tableViewFundSelected.getID());
-                        deleteStatement2.setInt(1, tableViewFundSelected.getID());
-
-                        deleteStatement1.execute();
-                        deleteStatement2.execute();
-
-                        deleteStatement1.close();
-                        deleteStatement2.close();
-
-                        //con.close();
-
-                        Alert inform = new Alert(Alert.AlertType.INFORMATION);
-                        inform.setTitle("Thông báo");
-                        inform.setContentText("Đã xoá thành công");
-                        inform.showAndWait();
-                    } catch (SQLException e) {
+            addFund.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    try {
+                        AddFundDialog addFundDialog = new AddFundDialog();
+                        Stage addStage = new Stage();
+                        addFundDialog.start(addStage);
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
+                    fundTableViewBuild();
+                    updateAvailableCash();
                 }
-                fundTableViewBuild();
-                updateAvailableCash();
-            }
-        });
+            });
 
-        fundContextMenu.getItems().addAll(addFund,editFund,deleteFund);
 
-        currentAccountText.setText(account.getUsername());
+            MenuItem editFund = new MenuItem("Chỉnh sửa");
+
+            editFund.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    tableViewFundSelected = fundTableView.getSelectionModel().getSelectedItem();
+                    try
+                    {
+                        EditFundDialog editFundDialog = new EditFundDialog();
+                        editFundDialog.start(new Stage());
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    fundTableViewBuild();
+                    updateAvailableCash();
+                }
+            });
+
+            MenuItem deleteFund = new MenuItem("Xoá");
+
+            deleteFund.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    tableViewFundSelected = fundTableView.getSelectionModel().getSelectedItem();
+
+                    Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);
+                    confirm.setTitle("Xác nhận");
+                    confirm.setContentText("Bạn có chắc chắn ?");
+                    Optional<ButtonType> result = confirm.showAndWait();
+
+                    if(result.get() == ButtonType.OK)
+                    {
+                        try
+                        {
+                            PreparedStatement deleteStatement1 = conn.prepareStatement("DELETE FROM fund_list WHERE ID = ?");
+                            PreparedStatement deleteStatement2 = conn.prepareStatement("DELETE FROM income WHERE fundID = ?");
+
+                            deleteStatement1.setInt(1, tableViewFundSelected.getID());
+                            deleteStatement2.setInt(1, tableViewFundSelected.getID());
+
+                            deleteStatement1.execute();
+                            deleteStatement2.execute();
+
+                            deleteStatement1.close();
+                            deleteStatement2.close();
+
+                            //con.close();
+
+                            Alert inform = new Alert(Alert.AlertType.INFORMATION);
+                            inform.setTitle("Thông báo");
+                            inform.setContentText("Đã xoá thành công");
+                            inform.showAndWait();
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    fundTableViewBuild();
+                    updateAvailableCash();
+                }
+            });
+
+            fundContextMenu.getItems().addAll(addFund,editFund,deleteFund);
+        }
 
         // Pay table view init
         fundNameCol.setCellValueFactory(new PropertyValueFactory<TableViewFund,String>("fundname"));
-        fundCashCol.setCellValueFactory(new PropertyValueFactory<TableViewFund,Integer>("cash"));
         fundDateCol.setCellValueFactory(new PropertyValueFactory<>("date"));
+        fundCashCol.setCellValueFactory(column-> {
+            NumberFormat vi = NumberFormat.getInstance(new Locale("vi","VN"));
+            SimpleStringProperty property = new SimpleStringProperty();
+            property.setValue(vi.format(column.getValue().getCash()));
+            return property;
+        });
         fundTableViewBuild();
 
 
         // Initialization for pay context menu
-        MenuItem addPay = new MenuItem("Thêm");
+        if(account.getPermission().equals("admin") || account.getPermission().equals("manager"))
+        {
+            MenuItem addPay = new MenuItem("Thêm");
 
-        addPay.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    AddPayDialog addPayDialog = new AddPayDialog();
-                    Stage addStage = new Stage();
-                    addPayDialog.start(addStage);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                payTableViewBuild();
-                updateAvailableCash();
-            }
-        });
-
-
-        MenuItem editPay = new MenuItem("Chỉnh sửa");
-
-        editPay.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                tableViewPaySelected = payTableView.getSelectionModel().getSelectedItem();
-                try
-                {
-                    EditPayDialog editPayDialog = new EditPayDialog();
-                    editPayDialog.start(new Stage());
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                payTableViewBuild();
-                updateAvailableCash();
-            }
-        });
-
-        MenuItem deletePay = new MenuItem("Xoá");
-
-        deletePay.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                tableViewPaySelected = payTableView.getSelectionModel().getSelectedItem();
-
-                Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);
-                confirm.setTitle("Xác nhận");
-                confirm.setContentText("Bạn có chắc chắn ?");
-                Optional<ButtonType> result = confirm.showAndWait();
-
-                if(result.get() == ButtonType.OK)
-                {
-                    try
-                    {
-                        PreparedStatement deleteStatement1 = conn.prepareStatement("DELETE FROM pay_list WHERE ID = ?");
-
-                        deleteStatement1.setInt(1, tableViewPaySelected.getID());
-
-                        deleteStatement1.execute();
-
-                        deleteStatement1.close();
-
-                        //con.close();
-
-                        Alert inform = new Alert(Alert.AlertType.INFORMATION);
-                        inform.setTitle("Thông báo");
-                        inform.setContentText("Đã xoá thành công");
-                        inform.showAndWait();
-                    } catch (SQLException e) {
+            addPay.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    try {
+                        AddPayDialog addPayDialog = new AddPayDialog();
+                        Stage addStage = new Stage();
+                        addPayDialog.start(addStage);
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
+                    payTableViewBuild();
+                    updateAvailableCash();
                 }
-                payTableViewBuild();
-                updateAvailableCash();
-            }
-        });
+            });
 
-        payContextMenu.getItems().addAll(addPay,editPay,deletePay);
+
+            MenuItem editPay = new MenuItem("Chỉnh sửa");
+
+            editPay.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    tableViewPaySelected = payTableView.getSelectionModel().getSelectedItem();
+                    try
+                    {
+                        EditPayDialog editPayDialog = new EditPayDialog();
+                        editPayDialog.start(new Stage());
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    payTableViewBuild();
+                    updateAvailableCash();
+                }
+            });
+
+            MenuItem deletePay = new MenuItem("Xoá");
+
+            deletePay.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    tableViewPaySelected = payTableView.getSelectionModel().getSelectedItem();
+
+                    Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);
+                    confirm.setTitle("Xác nhận");
+                    confirm.setContentText("Bạn có chắc chắn ?");
+                    Optional<ButtonType> result = confirm.showAndWait();
+
+                    if(result.get() == ButtonType.OK)
+                    {
+                        try
+                        {
+                            PreparedStatement deleteStatement1 = conn.prepareStatement("DELETE FROM pay_list WHERE ID = ?");
+
+                            deleteStatement1.setInt(1, tableViewPaySelected.getID());
+
+                            deleteStatement1.execute();
+
+                            deleteStatement1.close();
+
+                            //con.close();
+
+                            Alert inform = new Alert(Alert.AlertType.INFORMATION);
+                            inform.setTitle("Thông báo");
+                            inform.setContentText("Đã xoá thành công");
+                            inform.showAndWait();
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    payTableViewBuild();
+                    updateAvailableCash();
+                }
+            });
+
+            payContextMenu.getItems().addAll(addPay,editPay,deletePay);
+        }
 
         // Pay table view init
         payNameCol.setCellValueFactory(new PropertyValueFactory<TableViewPay,String>("payname"));
-        payCashCol.setCellValueFactory(new PropertyValueFactory<TableViewPay,Integer>("cash"));
         payDateCol.setCellValueFactory(new PropertyValueFactory<>("date"));
+        payCashCol.setCellValueFactory(column-> {
+            NumberFormat vi = NumberFormat.getInstance(new Locale("vi","VN"));
+            SimpleStringProperty property = new SimpleStringProperty();
+            property.setValue(vi.format(column.getValue().getCash()));
+            return property;
+        });
         payTableViewBuild();
         updateAvailableCash();
 
