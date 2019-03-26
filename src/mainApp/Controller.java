@@ -5,6 +5,7 @@ import fundManage.addFund.AddFundDialog;
 import fundManage.TableViewFund;
 import fundManage.editFund.EditFundDialog;
 import income.Income;
+import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -410,6 +411,23 @@ public class Controller implements Initializable {
             error.showAndWait();
         }
         updateAvailableCash();
+    }
+
+    @FXML
+    void closeApp(ActionEvent event) throws SQLException {
+        conn.close();
+        Platform.exit();
+    }
+
+    @FXML
+    void showAbout(ActionEvent event) {
+        Alert aboutDialog = new Alert(Alert.AlertType.INFORMATION);
+        aboutDialog.setTitle("Thông tin");
+        aboutDialog.setHeaderText("Thông tin về chương trình");
+        aboutDialog.setContentText("Thành viên nhóm:\nNguyễn Đình Duy \t 1620054\n" +
+                                                    "Trương Huỳnh Đủ \t 1620040\n" +
+                                                    "Lê Bá Phước Long \t 1620128");
+        aboutDialog.show();
     }
 
     private int getAvailableCash()

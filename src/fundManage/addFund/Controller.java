@@ -49,7 +49,7 @@ public class Controller implements Initializable {
     };
 
     @FXML
-    private TextField payNameText;
+    private TextField fundNameText;
 
     @FXML
     private TextField cashText;
@@ -65,8 +65,16 @@ public class Controller implements Initializable {
 
     @FXML
     void addFund(ActionEvent event) {
+        if(fundNameText.getText().length() == 0 || cashText.getText().length() == 0)
+        {
+            Alert error = new Alert(Alert.AlertType.ERROR);
+            error.setTitle("Lỗi");
+            error.setContentText("Tên khoản thu và số tiền không thể rỗng");
+            error.showAndWait();
+            return;
+        }
         Fund fund = new Fund();
-        fund.setFundname(payNameText.getText());
+        fund.setFundname(fundNameText.getText());
         fund.setCash(Integer.parseInt(cashText.getText().replaceAll("\\.","")));
         fund.setDate(datePicker.getValue().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
         try
@@ -88,6 +96,13 @@ public class Controller implements Initializable {
             Stage stage = (Stage) addButton.getScene().getWindow();
             stage.close();
         } catch (SQLException e) {
+            if (e.getMessage().contains("SQLITE_CONSTRAINT_UNIQUE"))
+            {
+                Alert error = new Alert(Alert.AlertType.ERROR);
+                error.setTitle("Lỗi");
+                error.setContentText("Tên khoản thu không thể trùng nhau");
+                error.showAndWait();
+            }
             e.printStackTrace();
         }
     }

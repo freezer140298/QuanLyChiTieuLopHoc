@@ -14,7 +14,6 @@ import payManage.Pay;
 
 import java.net.URL;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.text.NumberFormat;
@@ -22,6 +21,8 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.ResourceBundle;
+
+import static login.Controller.conn;
 
 public class Controller implements Initializable {
 
@@ -64,17 +65,20 @@ public class Controller implements Initializable {
 
     @FXML
     void addPay(ActionEvent event) {
+        if(payNameText.getText().length() == 0 || cashText.getText().length() == 0)
+        {
+            Alert error = new Alert(Alert.AlertType.ERROR);
+            error.setTitle("Lỗi");
+            error.setContentText("Tên khoản thu và số tiền không thể rỗng");
+            error.showAndWait();
+            return;
+        }
         Pay pay = new Pay();
         pay.setPayname(payNameText.getText());
         pay.setCash(Integer.parseInt(cashText.getText().replaceAll("\\.","")));
         pay.setDate(datePicker.getValue().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
-        Connection conn = null;
         try
         {
-            Class.forName("org.sqlite.JDBC");
-            String url = "jdbc:sqlite:D:\\Object Oriented Programming\\database\\database.db";
-            conn = DriverManager.getConnection(url);
-
             PreparedStatement statement = conn.prepareStatement("INSERT INTO pay_list(payname,cash,date) " +
                                                                         " VALUES (?,?,?)");
             statement.setString(1, pay.getPayname());
@@ -93,9 +97,14 @@ public class Controller implements Initializable {
 
             Stage stage = (Stage) addButton.getScene().getWindow();
             stage.close();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         } catch (SQLException e) {
+            if (e.getMessage().contains("SQLITE_CONSTRAINT_UNIQUE"))
+            {
+                Alert error = new Alert(Alert.AlertType.ERROR);
+                error.setTitle("Lỗi");
+                error.setContentText("Tên khoản chi không thể trùng nhau");
+                error.showAndWait();
+            }
             e.printStackTrace();
         }
     }

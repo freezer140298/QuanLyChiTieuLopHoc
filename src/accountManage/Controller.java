@@ -160,6 +160,7 @@ public class Controller extends login.Controller implements Initializable {
                                 statement1.setInt(1,tableViewAccount.getID());
                                 statement1.setString(2,tableViewAccount.getUsername());
                                 statement1.execute();
+                                statement1.close();
 
                                 Alert inform = new Alert(Alert.AlertType.INFORMATION);
                                 inform.setTitle("Thông báo");
