@@ -50,7 +50,7 @@ public class Controller {
             File jarFile = new File(codeSource.getLocation().toURI().getPath());
             System.out.println(jarFile.getParentFile().getPath());
 
-            String url = "jdbc:sqlite:" + jarFile.getParentFile().getPath() + "/database.db";
+            String url = "jdbc:sqlite:" + jarFile.getParentFile().getPath() + "\\database.db";
 
             conn = DriverManager.getConnection(url);
 
