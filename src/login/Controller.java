@@ -9,7 +9,9 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import mainApp.mainApp;
 
+import java.io.File;
 import java.io.IOException;
+import java.security.CodeSource;
 import java.sql.*;
 import java.util.IllformedLocaleException;
 
@@ -44,7 +46,12 @@ public class Controller {
         try
         {
             Class.forName("org.sqlite.JDBC");
-            String url = "jdbc:sqlite::resource:database.db";
+            CodeSource codeSource = Controller.class.getProtectionDomain().getCodeSource();
+            File jarFile = new File(codeSource.getLocation().toURI().getPath());
+            System.out.println(jarFile.getParentFile().getPath());
+
+            String url = "jdbc:sqlite:" + jarFile.getParentFile().getPath() + "/database.db";
+
             conn = DriverManager.getConnection(url);
 
             PreparedStatement statement = conn.prepareStatement("SELECT * FROM account WHERE username = ? AND password = ?");

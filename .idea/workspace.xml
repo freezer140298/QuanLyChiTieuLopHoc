@@ -8,38 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change afterPath="D:/TH MATLAB/chiadoi.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/QuanLyChiTieuLopHoc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/QuanLyChiTieuLopHoc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/database/database.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/QuanLyChiTieuLopHoc/QuanLyChiTieuLopHoc.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/QuanLyChiTieuLopHoc/QuanLyChiTieuLopHoc.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/accountManage/Controller$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/accountManage/Controller$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/accountManage/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/accountManage/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/database.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/fundManage/addFund/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/fundManage/addFund/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/fundManage/addFund/addFundDialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/fundManage/addFund/addFundDialog.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/fundManage/editFund/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/fundManage/editFund/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/fundManage/editFund/editFundDialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/fundManage/editFund/editFundDialog.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/mainApp/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/mainApp/Controller$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/mainApp/Controller$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/mainApp/Controller$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/mainApp/Controller$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/mainApp/Controller$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/mainApp/Controller$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/mainApp/Controller$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/mainApp/Controller$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/mainApp/Controller$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/mainApp/Controller$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/mainApp/Controller$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/mainApp/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/mainApp/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/mainApp/mainForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/mainApp/mainForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/payManage/addPay/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/payManage/addPay/Controller$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/payManage/addPay/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/payManage/addPay/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/payManage/editPay/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/payManage/editPay/Controller$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/payManage/editPay/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuanLyChiTieuLopHoc/payManage/editPay/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/accountManage/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/accountManage/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fundManage/addFund/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fundManage/addFund/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fundManage/addFund/addFundDialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fundManage/addFund/addFundDialog.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fundManage/editFund/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fundManage/editFund/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fundManage/editFund/editFundDialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fundManage/editFund/editFundDialog.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainApp/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainApp/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainApp/mainForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainApp/mainForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/payManage/addPay/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payManage/addPay/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/payManage/editPay/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payManage/editPay/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/login/Controller.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -202,26 +172,26 @@
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.21" value="1" />
-          <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.22" value="2" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="account" value="1" />
           <entry key="fxml" value="8" />
-          <entry key="java" value="47" />
+          <entry key="java" value="48" />
           <entry key="sql" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Database Element" value="1" />
-          <entry key="JAVA" value="47" />
+          <entry key="JAVA" value="48" />
           <entry key="Scratch" value="1" />
           <entry key="XML" value="8" />
         </counts>
@@ -229,13 +199,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="fxml" value="8" />
-          <entry key="java" value="1263" />
+          <entry key="java" value="1479" />
           <entry key="sql" value="86" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1263" />
+          <entry key="JAVA" value="1479" />
           <entry key="Scratch" value="86" />
           <entry key="XML" value="8" />
         </counts>
@@ -256,23 +226,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mainApp/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="908">
+              <caret line="436" lean-forward="true" selection-start-line="436" selection-end-line="436" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/login/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="425" column="60" selection-start-line="425" selection-start-column="60" selection-end-line="425" selection-end-column="60" />
+              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mainApp/mainForm.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1003">
               <caret line="59" column="88" selection-start-line="59" selection-start-column="88" selection-end-line="59" selection-end-column="88" />
             </state>
           </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
     </leaf>
@@ -360,7 +339,6 @@
         <option value="$PROJECT_DIR$/src/studentManage/Controller.java" />
         <option value="$PROJECT_DIR$/src/accountManage/changePasswordDialog/changePasswordDialogController.java" />
         <option value="$PROJECT_DIR$/src/mainApp/mainApp.java" />
-        <option value="$PROJECT_DIR$/src/login/Controller.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ef41e488-77bb-4a6e-98e1-c300d5fce0c6/console.sql" />
         <option value="$PROJECT_DIR$/src/income/Controller.java" />
         <option value="$PROJECT_DIR$/src/accountManage/Controller.java" />
@@ -371,6 +349,7 @@
         <option value="$PROJECT_DIR$/src/fundManage/addFund/Controller.java" />
         <option value="$PROJECT_DIR$/src/fundManage/editFund/Controller.java" />
         <option value="$PROJECT_DIR$/src/mainApp/Controller.java" />
+        <option value="$PROJECT_DIR$/src/login/Controller.java" />
       </list>
     </option>
   </component>
@@ -381,8 +360,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="618" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -396,7 +375,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -413,13 +392,13 @@
               <item name="QuanLyChiTieuLopHoc" type="b2602c69:ProjectViewProjectNode" />
               <item name="QuanLyChiTieuLopHoc" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="mainApp" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -651,11 +630,12 @@
       <workItem from="1553431653784" duration="1134000" />
       <workItem from="1553435787774" duration="5107000" />
       <workItem from="1553480302972" duration="78000" />
+      <workItem from="1553615251173" duration="427000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147190000" />
+    <option name="totallyTimeSpent" value="147617000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -668,19 +648,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="4" sideWeight="0.6703755" visible="true" weight="0.1716418" />
+      <window_info content_ui="combo" id="Project" order="4" sideWeight="0.6703755" visible="true" weight="0.17324094" />
       <window_info id="Structure" order="5" weight="0.25" />
       <window_info id="Favorites" order="6" weight="0.3298969" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.2624729" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.2624729" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.3394794" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -828,12 +809,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/income/incomeManage.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/accountManage/TableViewAccount.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -850,12 +831,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/payManage/addPay/addPayDialog.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="223" selection-start-line="5" selection-start-column="223" selection-end-line="5" selection-end-column="223" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/payManage/Pay.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -872,12 +853,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/payManage/editPay/editPayDialog.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="127" selection-start-line="19" selection-start-column="127" selection-end-line="19" selection-end-column="127" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fundManage/TableViewFund.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -901,12 +882,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/accountManage/addAccountDialog/addAccountDialogForm.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="71" lean-forward="true" selection-start-line="21" selection-start-column="71" selection-end-line="21" selection-end-column="71" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/login/Login.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -940,12 +921,12 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/login/form.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="das://7d166ff5-8907-4a29-bb92-c1af769cf4ef/schema/main/table/account">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -965,13 +946,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1860">
           <caret line="158" column="54" selection-start-line="158" selection-start-column="54" selection-end-line="158" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/login/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="76" column="68" lean-forward="true" selection-start-line="76" selection-start-column="68" selection-end-line="76" selection-end-column="68" />
         </state>
       </provider>
     </entry>
@@ -1025,20 +999,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fundManage/editFund/editFundDialog.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fundManage/addFund/addFundDialog.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/payManage/editPay/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1077,16 +1051,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mainApp/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="425" column="60" selection-start-line="425" selection-start-column="60" selection-end-line="425" selection-end-column="60" />
+        <state relative-caret-position="908">
+          <caret line="436" lean-forward="true" selection-start-line="436" selection-end-line="436" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mainApp/mainForm.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1003">
           <caret line="59" column="88" selection-start-line="59" selection-start-column="88" selection-end-line="59" selection-end-column="88" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/login/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
