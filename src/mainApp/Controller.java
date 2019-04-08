@@ -425,7 +425,7 @@ public class Controller implements Initializable {
         aboutDialog.setTitle("Thông tin");
         aboutDialog.setHeaderText("Thông tin về chương trình");
         aboutDialog.setContentText("Thành viên nhóm:\nNguyễn Đình Duy \t 1620054\n" +
-                                                    "Trương Huỳnh Đủ \t 1620040\n" +
+                                                    "Trương Huỳnh Đủ \t 1620041\n" +
                                                     "Lê Bá Phước Long \t 1620128");
         aboutDialog.show();
     }
